@@ -105,7 +105,7 @@ for ipc_func in dupliate_ipc_make_header_refs:
 for ipc_func in unique_ipc_make_header_refs:
   args = getCallArgs(ipc_func, ipc_set_header_addr)
   if len(args) < 4:
-    print('Bad number of args at {}'.format(addr))
+    print('Bad number of args at {}'.format(ipc_set_header_addr))
   else:
     command_id = parseIpcVarNode(args[1])
     normal_params = parseIpcVarNode(args[2])
