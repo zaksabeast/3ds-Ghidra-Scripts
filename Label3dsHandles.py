@@ -30,6 +30,9 @@ service_handles = {}
 for get_handle_ref in get_handle_refs:
   addr = get_handle_ref.getFromAddress()
   args = getCallArgsFromRef(get_handle_ref)
+  if len(args) < 2:
+    print('Bad number of args at {}'.format(addr))
+    continue
   handle_ref = args[0]
   service = args[1]
   if handle_ref.isAddress():
